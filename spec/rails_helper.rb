@@ -42,12 +42,12 @@ RSpec.configure do |config|
 
   # Filter lines from Rails gems in backtraces.
   config.filter_rails_from_backtrace!
-  config.include FactoryBot::syntax::Methods
+  config.include FactoryBot::Syntax::Methods
 end
 
-shoulda::Matchers.configure do |config|
+Shoulda::Matchers.configure do |config|
   config.integrate do |with|
-    with.test_framwork :rspec
+    with.test_framework :rspec
     with.library :rails
   end
 end
