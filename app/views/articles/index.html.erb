@@ -1,12 +1,20 @@
 <h1> My Articles</h1>
 
+<table>
 
-<ul>
+<tr>
+    <th>Title</th>
+    <th>Option</th>
+    <th colspan="2"></th>
+  </tr>
+
 <% @articles.each do |article| %>
-<li>
-    <h2><%= link_to article.title, article_path(article) %></h2>
-</li>
+<tr>
+    <td><%= link_to article.title, article_path(article) %></td>
+    <td><%= link_to 'Edit', edit_article_path(article) %></td>
+</tr>
 <% end %>
-</ul>
+
+<table>
 
 <h3><%= link_to 'New Article', new_article_path%> </h3>
